@@ -1,4 +1,4 @@
-pipeline {
+/*pipeline {
   agent {
     docker {
       image 'cypress/base:10'
@@ -46,7 +46,7 @@ pipeline {
         stage('tester A') {
           steps {
             echo "Running build ${env.BUILD_ID}"
-            sh 'docker run -v $PWD:/e2e -w /e2e cypress/included:6.4.0'
+            sh 'docker run -v $PWD:/e2e -w /e2e cypress/included:6.6.0'
             sh "npm run e2e:record:parallel"
           }
         }
@@ -63,4 +63,4 @@ pipeline {
       sh 'pkill -f http-server'
     }
   }
-}
+}*/
